@@ -1,4 +1,3 @@
-flask_restful 
-Flask
-peewee
-datetime
+Flask==0.11
+peewee==2.8.5
+gunicorn==19.6.0
