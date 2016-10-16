@@ -6,7 +6,6 @@ DATABASE = SqliteDatabase('lots.sqlite')
 
 class Lot(Model):
 	reader_Name = CharField()
-	# tag_id = CharField(unique=True)
 	created_at = DateTimeField(default= datetime.datetime.now)
 
 	class Meta:
