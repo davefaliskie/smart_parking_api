@@ -4,9 +4,9 @@ import models
 from resources.lots import lots_api
 
 
-# DEBUG = True
-# HOST = '0.0.0.0'
-# PORT = 8000
+DEBUG = True
+HOST = '0.0.0.0'
+PORT = 8000
 
 app = Flask(__name__)
 app.register_blueprint(lots_api)
@@ -17,4 +17,4 @@ def hello_world():
 
 if __name__ == '__main__':
 	models.initialize()
-	# app.run(debug=DEBUG, host=HOST, port=PORT)
+	app.run(debug=DEBUG, host=HOST, port=PORT)

@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath smart_parking_api smart_parking_api.wsgi --log-file -
+web gunicorn manage:app
