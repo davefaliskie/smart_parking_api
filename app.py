@@ -13,7 +13,8 @@ app.register_blueprint(lots_api)
 
 @app.route('/')
 def hello_world():
-	return "Hello World"
+	return "API for collecting reader data for use with Smart Parking app."
+	return "Use /api/v1/lots extension to view data."
 
 if __name__ == '__main__':
 	models.initialize()
