@@ -11,7 +11,7 @@ import models
 lot_fields = {
 	'id': fields.Integer,
 	'reader_Name': fields.String,
-	'tag_id': fields.Integer
+	# 'tag_id': fields.Integer
 }
 
 def lot_or_404(lot_id):
@@ -32,13 +32,13 @@ class LotList(Resource):
 			help='No reader_Name provided',
 			location=['form', 'json']
 		)
-		self.reqparse.add_argument(
-			'tag_id',
-			required=True,
-			help='No valid tag id provided',
-			location=['form', 'json'],
-			type=inputs.int_range(0,999999999999999999999999999999)
-		)
+		# self.reqparse.add_argument(
+		# 	'tag_id',
+		# 	required=True,
+		# 	help='No valid tag id provided',
+		# 	location=['form', 'json'],
+		# 	type=inputs.int_range(0,999999999999999999999999999999)
+		# )
 		super().__init__()
 
 
@@ -68,13 +68,13 @@ class Lot(Resource):
 			help='No reader_Name provided',
 			location=['form', 'json']
 		)
-		self.reqparse.add_argument(
-			'tag_id',
-			required=True,
-			help='No valid tag id provided',
-			location=['form', 'json'],
-			type=inputs.int_range(0,999999999999999999999999999999)
-		)
+		# self.reqparse.add_argument(
+		# 	'tag_id',
+		# 	required=True,
+		# 	help='No valid tag id provided',
+		# 	location=['form', 'json'],
+		# 	type=inputs.int_range(0,999999999999999999999999999999)
+		# )
 		super().__init__()
 
 
