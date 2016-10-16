@@ -10,7 +10,8 @@ import models
 
 lot_fields = {
 	'id': fields.Integer,
-	'reader_Name': fields.String
+	'reader_Name': fields.String,
+	'field_values': fields.String
 }
 
 def lot_or_404(lot_id):
@@ -29,6 +30,14 @@ class LotList(Resource):
 			'reader_Name',
 			required=True,
 			help='No reader_Name provided',
+			location=['form', 'json']
+		)
+
+		self.reqparse = reqparse.RequestParser()
+		self.reqparse.add_argument(
+			'field_values',
+			required=True,
+			help='No field_values provided',
 			location=['form', 'json']
 		)
 
@@ -59,6 +68,14 @@ class Lot(Resource):
 			'reader_Name',
 			required=True,
 			help='No reader_Name provided',
+			location=['form', 'json']
+		)
+
+		self.reqparse = reqparse.RequestParser()
+		self.reqparse.add_argument(
+			'field_values',
+			required=True,
+			help='No field_values provided',
 			location=['form', 'json']
 		)
 
