@@ -10,7 +10,7 @@ import models
 
 lot_fields = {
 	'id': fields.Integer,
-	'title': fields.String,
+	'reader_Name': fields.String,
 	'tag_id': fields.Integer
 }
 
@@ -27,9 +27,9 @@ class LotList(Resource):
 	def __init__(self):
 		self.reqparse = reqparse.RequestParser()
 		self.reqparse.add_argument(
-			'title',
+			'reader_Name',
 			required=True,
-			help='No title provided',
+			help='No reader_Name provided',
 			location=['form', 'json']
 		)
 		self.reqparse.add_argument(
@@ -63,9 +63,9 @@ class Lot(Resource):
 	def __init__(self):
 		self.reqparse = reqparse.RequestParser()
 		self.reqparse.add_argument(
-			'title',
+			'reader_Name',
 			required=True,
-			help='No title provided',
+			help='No reader_Name provided',
 			location=['form', 'json']
 		)
 		self.reqparse.add_argument(
