@@ -5,8 +5,8 @@ from peewee import *
 DATABASE = SqliteDatabase('lots.sqlite')
 
 class Lot(Model):
-	field_values = CharField()
-	reader_Name = CharField()
+	field_values = CharField(default="Error retrieving")
+	reader_Name = CharField(default="Error retrieving")
 	created_at = DateTimeField(default= datetime.datetime.now)
 
 	class Meta:
