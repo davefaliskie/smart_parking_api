@@ -10,8 +10,8 @@ import models
 
 lot_fields = {
 	'id': fields.Integer,
-	'reader_Name': fields.String,
-	'field_values': fields.String
+	'field_values': fields.String,
+	'reader_Name': fields.String
 }
 
 def lot_or_404(lot_id):
