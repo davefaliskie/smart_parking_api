@@ -2,9 +2,9 @@ import datetime
 
 from peewee import *
 
-DATABASE = SqliteDatabase('lots.sqlite')
+DATABASE = SqliteDatabase('spaces.sqlite')
 
-class Lot(Model):
+class Space(Model):
 	field_values = CharField()
 	created_at = DateTimeField(default= datetime.datetime.now)
 
@@ -13,5 +13,5 @@ class Lot(Model):
 
 def initialize():
 	DATABASE.connect()
-	DATABASE.create_tables([Lot], safe=True)
+	DATABASE.create_tables([Space], safe=True)
 	DATABASE.close()
